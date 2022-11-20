@@ -38,16 +38,3 @@
   vertical-align: bottom;
 }
 
-.wordgrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.wordgrid-word {
-  display: flex;
-  place-items: center;
-  justify-content: center;
-  text-align: center;
-
-  padding: 1rem;
-}

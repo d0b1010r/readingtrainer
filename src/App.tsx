@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { AntCircleDown, AntCircleUp } from "./Icons";
 import { SuccessThing } from "./SuccessThingy";
+import { WordGrid } from "./WordGrid";
 import { wordlist } from "./wordlist";
 
 function App() {
@@ -51,16 +52,6 @@ function Navigation({
   return (
     <div className="navigation" onClick={onClick}>
       {children}
-    </div>
-  );
-}
-
-function WordGrid({ level }: { level: number }) {
-  return (
-    <div className="wordgrid">
-      {wordlist[level].map((word) => (
-        <div className="wordgrid-word">{word}</div>
-      ))}
     </div>
   );
 }
