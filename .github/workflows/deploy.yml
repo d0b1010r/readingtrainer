@@ -23,9 +23,6 @@ jobs:
           npm ci
           npm run build
 
-      - name: List output files
-        run: ls
-
       - name: Upload
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
