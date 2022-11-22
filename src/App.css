@@ -16,25 +16,3 @@
 .seperator {
   flex-grow: 1;
 }
-
-.navigation {
-  min-height: 3rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) text-shadow;
-  cursor: pointer;
-}
-.navigation svg {
-  height: 1rem;
-}
-.navigation:hover {
-  text-shadow: 0px 1px 20px white;
-}
-
-.navigation:last-child() {
-  vertical-align: bottom;
-}
-
