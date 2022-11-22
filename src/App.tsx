@@ -17,23 +17,18 @@ function App() {
   return (
     <div className="app">
       <SuccessThing show={showSuccess} done={() => setShowSuccess(false)} />
-      {level > 0 ? (
-        <Navigation onClick={() => changeLevel(level - 1)}>
-          <AntCircleUp />
-        </Navigation>
-      ) : (
-        <Navigation />
-      )}
+      <Navigation onClick={() => changeLevel(level - 1)} active={level > 0}>
+        <AntCircleUp />
+      </Navigation>
       <Seperator />
       <WordGrid level={level} />
       <Seperator />
-      {level < wordlist.length - 1 ? (
-        <Navigation onClick={() => changeLevel(level + 1)}>
-          <AntCircleDown />
-        </Navigation>
-      ) : (
-        <Navigation />
-      )}
+      <Navigation
+        onClick={() => changeLevel(level + 1)}
+        active={level < wordlist.length - 1}
+      >
+        <AntCircleDown />
+      </Navigation>
     </div>
   );
 }
@@ -45,13 +40,15 @@ function Seperator() {
 function Navigation({
   children,
   onClick,
+  active,
 }: {
   children?: any;
   onClick?: () => void;
+  active: boolean;
 }) {
   return (
     <div className="navigation" onClick={onClick}>
-      {children}
+      {active ? children : null}
     </div>
   );
 }
