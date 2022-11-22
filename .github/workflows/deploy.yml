@@ -7,6 +7,9 @@ jobs:
   build-and-deploy:
     name: Build and deploy via FTP
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://lesetraining.kloetz.com
     steps:
       - uses: actions/checkout@master
 
