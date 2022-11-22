@@ -1,20 +1,62 @@
-.navigation {
+.navigation-container {
+  --background-position-distance: 3rem;
+  --color: 215, 207, 180;
+  --color-alpha: 1;
+}
+.navigation-container--active {
+  cursor: pointer;
+}
+
+.navigation-container .navigation {
+  visibility: hidden;
   min-height: 3rem;
-  text-align: center;
+}
+
+.navigation-container--active .navigation {
+  visibility: visible;
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
 
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) text-shadow;
-  cursor: pointer;
+  transition: transform 250ms, background-position 250ms;
 }
-.navigation svg {
+.navigation-container svg {
   height: 1rem;
-}
-.navigation:hover {
-  text-shadow: 0px 1px 20px white;
+  transition: filter 250ms;
 }
 
-.navigation:last-child() {
-  vertical-align: bottom;
+.navigation-container:first-child .navigation {
+  transform-origin: top center;
+  background: radial-gradient(
+      ellipse 50% 100% at center 0%,
+      rgb(var(--color), var(--color-alpha)),
+      rgba(var(--color), 0)
+    )
+    no-repeat;
+  background-position: 0% calc(var(--background-position-distance) * -1);
+}
+.navigation-container:first-child:hover .navigation {
+  transform: perspective(400px) rotateX(-15deg);
+  background-position: 0px 0px;
+}
+
+.navigation-container:last-child .navigation {
+  transform-origin: bottom center;
+  background: radial-gradient(
+      ellipse 50% 100% at center 100%,
+      rgb(var(--color), var(--color-alpha)),
+      rgba(var(--color), 0)
+    )
+    no-repeat;
+  background-position: 0% var(--background-position-distance);
+}
+.navigation-container:last-child:hover .navigation {
+  transform: perspective(400px) rotateX(15deg);
+  background-position: 0px 0px;
+}
+
+.navigation-container:hover .navigation svg {
+  filter: drop-shadow(0 5px 10px rgba(255, 255, 255, 1))
+    drop-shadow(0 -5px 10px rgba(0, 0, 0, 0.5));
 }

@@ -10,8 +10,16 @@ export function Navigation({
   active: boolean;
 }) {
   return (
-    <div className="navigation" onClick={onClick}>
-      {active ? children : null}
+    <div
+      className={[
+        "navigation-container",
+        active && "navigation-container--active",
+      ]
+        .filter((x) => x)
+        .join(" ")}
+      onClick={onClick}
+    >
+      <div className="navigation">{children}</div>
     </div>
   );
 }
