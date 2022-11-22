@@ -31,4 +31,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           local-dir: dist/
-          git-ftp-args: --insecure # if your certificate is setup correctly this can be removed
