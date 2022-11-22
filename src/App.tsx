@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import { AntCircleDown, AntCircleUp } from "./Icons";
-import { Navigation } from "./Navigation";
-import { SuccessThing } from "./SuccessThingy";
-import { WordGrid } from "./WordGrid";
+import { AntCircleDown, AntCircleUp } from "./components/Icons/Icons";
+import { Navigation } from "./components/Navigation/Navigation";
+import { SuccessThing } from "./components/SuccessThing/SuccessThingy";
+import { WordGrid } from "./components/WordGrid/WordGrid";
 import { wordlist } from "./wordlist";
 
 function App() {

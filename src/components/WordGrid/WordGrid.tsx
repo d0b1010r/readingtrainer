@@ -1,4 +1,4 @@
-import { wordlist } from "./wordlist";
+import { wordlist } from "../../wordlist";
 import "./WordGrid.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { createRef, useEffect, useRef, useState } from "react";
