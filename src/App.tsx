@@ -24,9 +24,9 @@ function App() {
       ) : (
         <Navigation />
       )}
-      <Navigator />
+      <Seperator />
       <WordGrid level={level} />
-      <Navigator />
+      <Seperator />
       {level < wordlist.length - 1 ? (
         <Navigation onClick={() => changeLevel(level + 1)}>
           <AntCircleDown />
@@ -38,7 +38,7 @@ function App() {
   );
 }
 
-function Navigator() {
+function Seperator() {
   return <div className="seperator"></div>;
 }
 
