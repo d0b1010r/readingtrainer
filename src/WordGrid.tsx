@@ -13,7 +13,7 @@ export function WordGrid({ level }: { level: number }) {
   }));
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="wordgrid-container">
       {levels.map(({ id, nodeRef, words }) => (
         <CSSTransition
           key={id}

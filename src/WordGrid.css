@@ -1,3 +1,7 @@
+.wordgrid-container {
+  position: relative;
+}
+
 .wordgrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
