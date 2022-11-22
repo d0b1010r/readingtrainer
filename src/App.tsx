@@ -17,12 +17,12 @@ function App() {
 
   return (
     <div className="app">
-      <SuccessThing show={showSuccess} done={() => setShowSuccess(false)} />
       <Navigation onClick={() => changeLevel(level - 1)} active={level > 0}>
         <AntCircleUp />
       </Navigation>
       <Seperator />
       <WordGrid level={level} />
+      <SuccessThing show={showSuccess} done={() => setShowSuccess(false)} />
       <Seperator />
       <Navigation
         onClick={() => changeLevel(level + 1)}
