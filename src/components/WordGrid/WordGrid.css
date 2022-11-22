@@ -23,22 +23,22 @@
   position: absolute;
   top: 0;
   width: 100%;
-  transform: translate(0px, 0%);
+  transform: translate(0px, 0%) scale(1);
 }
 .wordgrid-up-exit-active,
 .wordgrid-up-exit-done {
   opacity: 0;
-  transform: translate(0px, +100%);
+  transform: translate(0px, +100%) scale(0.7);
 }
 
 .wordgrid-up-enter {
   opacity: 0;
-  transform: translate(0px, -100%);
+  transform: translate(0px, -100%) scale(0.7);
 }
 .wordgrid-up-enter-active,
 .wordgrid-up-enter-done {
   opacity: 1;
-  transform: translate(0px, 0%);
+  transform: translate(0px, 0%) scale(1);
 }
 
 .wordgrid-up-enter-active,
@@ -53,22 +53,22 @@
   position: absolute;
   top: 0;
   width: 100%;
-  transform: translate(0px, 0%);
+  transform: translate(0px, 0%) scale(1);
 }
 .wordgrid-down-exit-active,
 .wordgrid-down-exit-done {
   opacity: 0;
-  transform: translate(0px, -100%);
+  transform: translate(0px, -100%) scale(0.7);
 }
 
 .wordgrid-down-enter {
   opacity: 0;
-  transform: translate(0px, +100%);
+  transform: translate(0px, +100%) scale(0.7);
 }
 .wordgrid-down-enter-active,
 .wordgrid-down-enter-done {
   opacity: 1;
-  transform: translate(0px, 0%);
+  transform: translate(0px, 0%) scale(1);
 }
 
 .wordgrid-down-enter-active,
